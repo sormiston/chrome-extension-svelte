@@ -13,7 +13,7 @@ const store = {
   }
 }
 const app = new App({
-	target: document.body,
+	target: document.querySelector("#container"),
 	props: {
 		name: 'world'
 	}

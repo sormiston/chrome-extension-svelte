@@ -4,10 +4,13 @@
   "content_scripts": [
     {
       "matches": [
-        "http://pt.wikipedia.org/*"
+        "https://yabwe.github.io/medium-editor/demo.html"
       ],
       "js": [
         "content/main.js"
+      ],
+      "css": [
+        "content/style.css"
       ]
     }
   ]
