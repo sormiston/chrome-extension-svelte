@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Svelte Extension Test",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://pt.wikipedia.org/*"
+      ],
+      "js": [
+        "content/main.js"
+      ]
+    }
+  ]
+}
