@@ -1,1 +1,1 @@
-main#my-flip-test{position:absolute;bottom:0;right:0;text-align:center;padding:1em;max-width:240px;margin:0 auto}main#my-flip-test h1{color:#3bba3b;text-transform:uppercase;font-size:4em;font-weight:100}@media(min-width: 640px){main#my-flip-test main{max-width:none}}
+main#my-flip-test{position:absolute;text-align:center;padding:1em;max-width:240px;margin:0 auto;background-color:rgba(200,120,15,.6)}main#my-flip-test h1{color:#3bba3b;text-transform:uppercase;font-size:4em;font-weight:100}@media(min-width: 640px){main#my-flip-test main{max-width:none}}

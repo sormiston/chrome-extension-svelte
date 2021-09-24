@@ -1,22 +1,19 @@
-import App from './App.svelte';
+import App from "./App.svelte";
+import { writable } from "svelte/store";
 
-document.addEventListener('selectionchange', () => {
-  store.selection = document.getSelection()
-})
+document.addEventListener("selectionchange", () => {
+  const pos = window.getSelection()
+  const range = document.createRange()
+  range.setStart(pos.anchorNode, pos.anchorOffset)
+  range.setEnd(pos.focusNode, pos.focusOffset)
+  const rect = range.getBoundingClientRect()
+  selection.set(rect)
+});
 
-const store = {
-  selection: null,
-  subscription: null,
-  subscribe(func) {
-    this.subscription = func(this)
-    return this.subscription
-  }
-}
+export const selection = writable(null);
+
 const app = new App({
-	target: document.querySelector("#container"),
-	props: {
-		name: 'world'
-	}
+  target: document.querySelector("#container"),
 });
 
 export default app;

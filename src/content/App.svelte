@@ -1,10 +1,19 @@
 <script>
-	export let name;
-  console.log('hello');
+  import { selection } from "./main.js";
+  export let name;
+  console.log("hello");
+
+  let bottom;
+  let left;
+  $: {
+    console.log($selection)
+    if ($selection) {
+      bottom = $selection.bottom;
+      left = $selection.left;
+    }
+  }
 </script>
 
-<main id="my-flip-test">
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+<main id="my-flip-test" style="top: {bottom}px; left: {left}px">
+  
 </main>
-
